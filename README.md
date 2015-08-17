@@ -92,10 +92,10 @@ def _example():
 
     if useDefaultSerialer:
         # The built-in converter which uses pickle and base64 to serial the Hconf
-        h = Hconf(myFieldDefinition(), path)
+        h = myHconf(myFieldDefinition(), path)
     else:
         # The serialer you defined above
-        h = Hconf(myFieldDefinition(), path, mySerialer)
+        h = myHconf(myFieldDefinition(), path, mySerialer)
     
     if action == "save":
         h.SET("lang", "de")
